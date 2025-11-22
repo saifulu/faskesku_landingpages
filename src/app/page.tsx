@@ -7,13 +7,14 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex items-center h-16">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
                 <Shield className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold text-gray-900 dark:text-white">FASKESKU</span>
             </div>
+            <div className="flex-1"></div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#about" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Tentang</a>
               <a href="#features" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Fitur</a>
@@ -22,6 +23,9 @@ export default function Home() {
               <button className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
                 <Moon className="w-5 h-5 text-gray-700 dark:text-gray-300" />
               </button>
+              <a href="#numpang-server" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-200">
+                ✨ Numpang Server
+              </a>
             </div>
             <button className="md:hidden p-2">
               <Menu className="w-6 h-6 text-gray-700 dark:text-gray-300" />
@@ -43,8 +47,8 @@ export default function Home() {
                 Rekam Medis Digital
               </h1>
               <p className="mt-6 text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                Solusi rekam medis elektronik gratis dan open source untuk FKTP (Puskesmas, Klinik, Dokter, dan Praktek Mandiri). 
-                Kelola data pasien, jadwal konsultasi, dan riwayat medis dengan mudah dan aman. 
+                Solusi rekam medis elektronik <strong>gratis dan open source</strong> untuk FKTP (Puskesmas, Klinik, Dokter, dan Praktek Mandiri).
+                Kelola data pasien, jadwal konsultasi, dan riwayat medis dengan mudah dan aman.
                 Sistem yang dapat disesuaikan dengan kebutuhan praktek Anda untuk meningkatkan efisiensi pelayanan kesehatan.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -57,29 +61,29 @@ export default function Home() {
                   Lihat Source Code
                 </button>
               </div>
-              
+
               {/* Integration Partners */}
               <div className="mt-8">
                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 text-center lg:text-left">Terintegrasi dengan:</p>
                 <div className="flex items-center justify-center lg:justify-start gap-6">
                   {/* BPJS Kesehatan Logo */}
                   <div className="flex items-center gap-3 bg-white dark:bg-gray-800 px-4 py-3 rounded-lg shadow-md">
-                    <Image 
-                      src="/bpjs-logo.png" 
-                      alt="BPJS Kesehatan Logo" 
-                      width={40} 
+                    <Image
+                      src="/bpjs-logo.png"
+                      alt="BPJS Kesehatan Logo"
+                      width={40}
                       height={40}
                       className="object-contain"
                     />
                     <span className="text-sm font-medium text-gray-700 dark:text-gray-300">BPJS Kesehatan</span>
                   </div>
-                  
+
                   {/* Satu Sehat Logo */}
                   <div className="flex items-center gap-3 bg-white dark:bg-gray-800 px-4 py-3 rounded-lg shadow-md">
-                    <Image 
-                      src="/satu-sehat-logo.png" 
-                      alt="Satu Sehat Logo" 
-                      width={40} 
+                    <Image
+                      src="/satu-sehat-logo.png"
+                      alt="Satu Sehat Logo"
+                      width={40}
                       height={40}
                       className="object-contain"
                     />
@@ -87,7 +91,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-8 flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-500 dark:text-gray-400">
                 <div className="flex items-center gap-1">
                   <CheckCircle className="w-4 h-4 text-green-500" />
@@ -103,7 +107,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
+
             {/* Enhanced Medical Dashboard Mockup */}
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-100 to-green-100 dark:from-blue-900/20 dark:to-green-900/20 rounded-3xl p-8 shadow-2xl">
@@ -123,7 +127,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Dashboard Content */}
                   <div className="p-6">
                     {/* Header with Patient Info */}
@@ -142,7 +146,7 @@ export default function Home() {
                         <span>15 Jan 2024</span>
                       </div>
                     </div>
-                    
+
                     {/* Patient Cards */}
                     <div className="space-y-4">
                       {/* Patient 1 */}
@@ -168,7 +172,7 @@ export default function Home() {
                           <span>Terapi: Amlodipine 5mg</span>
                         </div>
                       </div>
-                      
+
                       {/* Patient 2 */}
                       <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 border border-green-200 dark:border-green-800">
                         <div className="flex items-center justify-between">
@@ -192,7 +196,7 @@ export default function Home() {
                           <span>Ruang: 102</span>
                         </div>
                       </div>
-                      
+
                       {/* Patient 3 */}
                       <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4 border border-purple-200 dark:border-purple-800">
                         <div className="flex items-center justify-between">
@@ -217,7 +221,7 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    
+
                     {/* Bottom Stats */}
                     <div className="mt-6 grid grid-cols-3 gap-4">
                       <div className="text-center">
@@ -235,7 +239,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Floating Medical Icons */}
                 <div className="absolute -top-4 -right-4 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center shadow-lg animate-bounce">
                   <FileText className="w-6 h-6 text-white" />
@@ -263,7 +267,7 @@ export default function Home() {
               FASKESKU adalah solusi rekam medis elektronik yang revolusioner untuk dunia kesehatan Indonesia
             </p>
           </div>
-          
+
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
@@ -271,11 +275,11 @@ export default function Home() {
               </h3>
               <div className="space-y-4 text-gray-600 dark:text-gray-300">
                 <p className="text-lg leading-relaxed">
-                  FASKESKU hadir dengan misi untuk memberikan akses teknologi rekam medis elektronik yang berkualitas tinggi 
+                  FASKESKU hadir dengan misi untuk memberikan akses teknologi rekam medis elektronik yang berkualitas tinggi
                   kepada seluruh tenaga kesehatan di Indonesia, tanpa memandang ukuran klinik atau kemampuan finansial.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Kami percaya bahwa setiap dokter, klinik, dan puskesmas berhak mendapatkan sistem informasi kesehatan 
+                  Kami percaya bahwa setiap dokter, klinik, dan puskesmas berhak mendapatkan sistem informasi kesehatan
                   yang modern, aman, dan mudah digunakan untuk memberikan pelayanan terbaik kepada pasien.
                 </p>
               </div>
@@ -316,7 +320,7 @@ export default function Home() {
                 Lihat di GitHub
               </a>
             </div>
-            
+
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-4">
                 <Heart className="w-6 h-6 text-white" />
@@ -329,7 +333,7 @@ export default function Home() {
                 Made in Indonesia 🇮🇩
               </div>
             </div>
-            
+
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                 <Globe className="w-6 h-6 text-white" />
@@ -411,144 +415,92 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Download Section */}
       {/* Numpang Server Section */}
-      <section id="numpang-server" className="py-16 bg-gradient-to-r from-purple-600 to-pink-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+      <section id="numpang-server" className="py-16 bg-gradient-to-br from-purple-50 via-pink-50 to-purple-50 dark:from-purple-900/20 dark:via-pink-900/20 dark:to-purple-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Numpang Server
             </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Bagi yang tidak mau ribet dengan mengelola sendiri servernya, disini menerangkan numpang server di tempat kita dengan beberapa fasilitas.
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Tidak mau ribet kelola server sendiri? Kami sediakan layanan hosting dengan infrastruktur enterprise,
+              monitoring 24/7, dan support teknis profesional.
             </p>
           </div>
-          
-          {/* Server Hosting Features */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-6 h-6 text-white" />
+
+          {/* Features Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-purple-100 dark:border-purple-800">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-6">
+                <Shield className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Keamanan Terjamin</h3>
-              <p className="text-purple-100 text-sm">Server dengan keamanan tingkat enterprise dan backup otomatis</p>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Keamanan Terjamin</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Server dengan keamanan tingkat enterprise, SSL certificate, firewall, dan backup otomatis setiap hari.
+              </p>
             </div>
-            <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Monitor className="w-6 h-6 text-white" />
+
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-purple-100 dark:border-purple-800">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-6">
+                <Monitor className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Monitoring 24/7</h3>
-              <p className="text-purple-100 text-sm">Pemantauan server dan aplikasi secara real-time</p>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Monitoring 24/7</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Pemantauan server dan aplikasi secara real-time dengan notifikasi otomatis jika ada masalah.
+              </p>
             </div>
-            <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Users className="w-6 h-6 text-white" />
+
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-purple-100 dark:border-purple-800">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-6">
+                <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Support Teknis</h3>
-              <p className="text-purple-100 text-sm">Tim support siap membantu kapan saja dibutuhkan</p>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Support Profesional</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Tim support teknis siap membantu via WhatsApp, email, atau telepon kapan saja dibutuhkan.
+              </p>
             </div>
           </div>
 
-          {/* Registration Form */}
-          <div className="bg-white/10 backdrop-blur rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white text-center mb-6">
-              Daftar Numpang Server
-            </h3>
-            <form className="max-w-2xl mx-auto space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-white text-sm font-medium mb-2">
-                    Nama Klinik/Praktek
-                  </label>
-                  <input 
-                    type="text" 
-                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-purple-200 focus:outline-none focus:ring-2 focus:ring-white/50" 
-                    placeholder="Masukkan nama klinik"
-                  />
-                </div>
-                <div>
-                  <label className="block text-white text-sm font-medium mb-2">
-                    Nama Dokter
-                  </label>
-                  <input 
-                    type="text" 
-                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-purple-200 focus:outline-none focus:ring-2 focus:ring-white/50" 
-                    placeholder="Masukkan nama dokter"
-                  />
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-white text-sm font-medium mb-2">
-                    Email
-                  </label>
-                  <input 
-                    type="email" 
-                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-purple-200 focus:outline-none focus:ring-2 focus:ring-white/50" 
-                    placeholder="email@example.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-white text-sm font-medium mb-2">
-                    Nomor Telepon
-                  </label>
-                  <input 
-                    type="tel" 
-                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-purple-200 focus:outline-none focus:ring-2 focus:ring-white/50" 
-                    placeholder="08xxxxxxxxxx"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-white text-sm font-medium mb-2">
-                  Alamat Klinik
-                </label>
-                <textarea 
-                  rows={3}
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-purple-200 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none" 
-                  placeholder="Masukkan alamat lengkap klinik"
-                ></textarea>
-              </div>
-
-              <div>
-                <label className="block text-white text-sm font-medium mb-2">
-                  Estimasi Jumlah Pasien per Hari
-                </label>
-                <select className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-white/50">
-                  <option value="" className="text-gray-800">Pilih estimasi pasien</option>
-                  <option value="1-10" className="text-gray-800">1-10 pasien</option>
-                  <option value="11-25" className="text-gray-800">11-25 pasien</option>
-                  <option value="26-50" className="text-gray-800">26-50 pasien</option>
-                  <option value="50+" className="text-gray-800">Lebih dari 50 pasien</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-white text-sm font-medium mb-2">
-                  Catatan Tambahan (Opsional)
-                </label>
-                <textarea 
-                  rows={3}
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-purple-200 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none" 
-                  placeholder="Kebutuhan khusus atau pertanyaan lainnya"
-                ></textarea>
-              </div>
-
-              <div className="text-center">
-                <button 
-                  type="submit" 
-                  className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-2 mx-auto"
-                >
-                  <Users className="w-5 h-5" />
-                  Daftar Numpang Server
-                </button>
-                <p className="text-purple-100 text-sm mt-4">
-                  Tim kami akan menghubungi Anda dalam 1x24 jam untuk proses selanjutnya
+          {/* CTA Section */}
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Left: Text */}
+              <div className="text-left">
+                <h3 className="text-3xl font-bold text-white mb-4">
+                  Siap Mulai Tanpa Ribet?
+                </h3>
+                <p className="text-xl text-purple-100">
+                  Fokus pada pasien Anda, biarkan kami yang urus infrastruktur teknologi.
+                  Server enterprise-grade dengan <span className="font-bold text-yellow-300">uptime 99.9%</span>,
+                  backup otomatis, dan support 24/7. Tanpa ribet setup!
                 </p>
               </div>
-            </form>
+
+              {/* Right: Buttons */}
+              <div className="flex flex-col gap-4">
+                <a
+                  href="https://cloud.faskesku.id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2"
+                >
+                  <Users className="w-5 h-5" />
+                  Daftar Sekarang
+                </a>
+                <a
+                  href="https://wa.me/6285229572326?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Numpang%20Server%20FASKESKU"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-purple-500/30 backdrop-blur text-white border-2 border-white/30 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/50 transition-colors flex items-center justify-center gap-2"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Konsultasi Gratis
+                </a>
+                <p className="text-purple-100 text-sm text-center mt-2">
+                  💬 Tim kami akan menghubungi Anda dalam 1x24 jam
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -562,14 +514,10 @@ export default function Home() {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Download aplikasi gratis sekarang dan rasakan kemudahan mengelola rekam medis digital untuk klinik Anda.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex justify-center">
             <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-2">
               <Download className="w-5 h-5" />
-              Download untuk Windows
-            </button>
-            <button className="bg-white/10 backdrop-blur text-white border-2 border-white/20 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/20 transition-colors flex items-center gap-2">
-              <Download className="w-5 h-5" />
-              Download untuk Mac
+              Download
             </button>
           </div>
           <div className="mt-8 flex items-center justify-center gap-8 text-blue-100">
@@ -588,31 +536,31 @@ export default function Home() {
       {/* Floating WhatsApp Buttons */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
         {/* WhatsApp Button 1 */}
-        <a 
-          href="https://wa.me/6285229572326?text=Halo,%20saya%20tertarik%20dengan%20FASKESKU" 
-          target="_blank" 
+        <a
+          href="https://wa.me/6285229572326?text=Halo,%20saya%20tertarik%20dengan%20FASKESKU"
+          target="_blank"
           rel="noopener noreferrer"
           className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center group"
         >
           {/* WhatsApp Logo SVG */}
           <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
           </svg>
           <span className="absolute right-full mr-3 bg-gray-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             Hubungi Kami (1)
           </span>
         </a>
-        
+
         {/* WhatsApp Button 2 */}
-        <a 
-          href="https://wa.me/6282241896669?text=Halo,%20saya%20tertarik%20dengan%20FASKESKU" 
-          target="_blank" 
+        <a
+          href="https://wa.me/6282241896669?text=Halo,%20saya%20tertarik%20dengan%20FASKESKU"
+          target="_blank"
           rel="noopener noreferrer"
           className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center group"
         >
           {/* WhatsApp Logo SVG */}
           <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
           </svg>
           <span className="absolute right-full mr-3 bg-gray-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             Hubungi Kami (2)
@@ -632,7 +580,7 @@ export default function Home() {
                 <span className="text-xl font-bold">FASKESKU</span>
               </div>
               <p className="text-gray-400 mb-4 max-w-md">
-                Aplikasi rekam medis elektronik gratis dan open source yang membantu klinik dokter dan praktek mandiri 
+                Aplikasi rekam medis elektronik <strong>gratis dan open source</strong> yang membantu klinik dokter dan praktek mandiri
                 mengelola data pasien dengan mudah dan aman.
               </p>
               <div className="flex items-center gap-4 mb-4">
