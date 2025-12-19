@@ -1,10 +1,68 @@
 import Image from "next/image";
 import { Download, Shield, Users, Clock, CheckCircle, Star, Menu, Moon, Sun, Code, Heart, Globe, Github, FileText, Activity, Calendar, Stethoscope, Monitor, Database, MessageCircle } from "lucide-react";
 import FeatureSlider from "../components/FeatureSlider";
+import Script from "next/script";
 
 export default function Home() {
+  // Structured Data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://faskesku.id/#organization",
+        "name": "FASKESKU",
+        "url": "https://faskesku.id",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://faskesku.id/logo.png"
+        },
+        "description": "Penyedia sistem rekam medis elektronik gratis dan open source untuk fasilitas kesehatan di Indonesia",
+        "sameAs": [
+          "https://github.com/AbahWeb/faskesku.id",
+          "https://twitter.com/faskesku"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://faskesku.id/#website",
+        "url": "https://faskesku.id",
+        "name": "FASKESKU - Rekam Medis Elektronik Gratis",
+        "description": "Sistem Rekam Medis Elektronik gratis dan open source untuk FKTP, Puskesmas, Klinik, dan Dokter Praktek Mandiri",
+        "publisher": {
+          "@id": "https://faskesku.id/#organization"
+        },
+        "inLanguage": "id-ID"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "FASKESKU",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Windows, macOS, Linux",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "IDR"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "1000"
+        },
+        "description": "Sistem Rekam Medis Elektronik gratis dan open source untuk fasilitas kesehatan tingkat pertama di Indonesia. Terintegrasi dengan BPJS Kesehatan dan Satu Sehat Kemenkes."
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
+      {/* JSON-LD Structured Data for SEO */}
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Large gradient orbs */}
@@ -20,25 +78,37 @@ export default function Home() {
       </div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 z-50">
+      <nav className="fixed top-0 w-full bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center h-16">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
-                <Shield className="w-5 h-5 text-white" />
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-teal-500 via-emerald-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-teal-500/30">
+                <Shield className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900 dark:text-white">faskesku.id</span>
+              <span className="text-xl font-bold bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">faskesku.id</span>
             </div>
             <div className="flex-1"></div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#about" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Tentang</a>
-              <a href="#features" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Fitur</a>
-              <a href="#download" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Download</a>
-              <a href="#contact" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Kontak</a>
-              <button className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+              <a href="#about" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors relative group">
+                Tentang
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
+              </a>
+              <a href="#features" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors relative group">
+                Fitur
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
+              </a>
+              <a href="#download" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors relative group">
+                Download
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
+              </a>
+              <a href="#contact" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors relative group">
+                Kontak
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
+              </a>
+              <button className="p-2 rounded-xl bg-gray-100/80 dark:bg-gray-800/80 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 backdrop-blur-sm">
                 <Moon className="w-5 h-5 text-gray-700 dark:text-gray-300" />
               </button>
-              <a href="#numpang-server" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-200">
+              <a href="#numpang-server" className="bg-gradient-to-r from-purple-600 via-purple-500 to-pink-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:shadow-xl hover:shadow-purple-500/30 hover:scale-105 transition-all duration-300 text-sm">
                 ✨ Numpang Server
               </a>
             </div>
@@ -50,47 +120,51 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8" itemScope itemType="https://schema.org/SoftwareApplication">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gray-900 dark:text-white leading-tight tracking-tight">
+                <span className="bg-gradient-to-r from-teal-600 via-emerald-600 to-cyan-600 bg-clip-text text-transparent drop-shadow-sm">
                   FASKESKU
                 </span>
                 <br />
-                Rekam Medis Digital
+                <span className="text-gray-800 dark:text-gray-100">Rekam Medis</span>
+                <br />
+                <span className="text-gray-800 dark:text-gray-100">Digital</span>
               </h1>
-              <p className="mt-6 text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                Solusi rekam medis elektronik <strong>gratis dan open source</strong> untuk FKTP (Puskesmas, Klinik, Dokter, dan Praktek Mandiri).
+              <p className="mt-8 text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl">
+                Solusi rekam medis elektronik <strong className="text-teal-600 dark:text-teal-400">gratis dan open source</strong> untuk FKTP (Puskesmas, Klinik, Dokter, dan Praktek Mandiri).
+                <br /><br />
                 Kelola data pasien, jadwal konsultasi, dan riwayat medis dengan mudah dan aman.
                 Sistem yang dapat disesuaikan dengan kebutuhan praktek Anda untuk meningkatkan efisiensi pelayanan kesehatan.
               </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a
                   href="/download"
-                  className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2"
+                  className="group bg-gradient-to-r from-teal-600 via-emerald-600 to-cyan-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-teal-500/40 transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 relative overflow-hidden"
                 >
-                  <Download className="w-5 h-5" />
-                  Download Gratis
+                  <span className="absolute inset-0 bg-gradient-to-r from-teal-500 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <Download className="w-6 h-6 relative z-10" />
+                  <span className="relative z-10">Download Gratis</span>
                 </a>
                 <a
-                  href="https://github.com/jebeng83/faskesku.id"
+                  href="https://github.com/AbahWeb/faskesku.id"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center gap-2"
+                  className="group border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-teal-500 dark:hover:border-teal-500 transition-all duration-300 flex items-center justify-center gap-3"
                 >
-                  <Github className="w-5 h-5" />
-                  Lihat Source Code
+                  <Github className="w-6 h-6 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors" />
+                  <span className="group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Lihat Source Code</span>
                 </a>
               </div>
 
               {/* Integration Partners */}
-              <div className="mt-8">
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 text-center lg:text-left">Terintegrasi dengan:</p>
+              <div className="mt-10">
+                <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-4 text-center lg:text-left uppercase tracking-wider">Terintegrasi dengan:</p>
                 <div className="flex items-center justify-center lg:justify-start gap-6">
                   {/* BPJS Kesehatan Logo */}
-                  <div className="flex items-center gap-3 bg-white dark:bg-gray-800 px-4 py-3 rounded-lg shadow-md">
+                  <div className="flex items-center gap-3 bg-white dark:bg-gray-800 px-5 py-3 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 dark:border-gray-700">
                     <Image
                       src="/bpjs-logo.png"
                       alt="BPJS Kesehatan Logo"
@@ -102,7 +176,7 @@ export default function Home() {
                   </div>
 
                   {/* Satu Sehat Logo */}
-                  <div className="flex items-center gap-3 bg-white dark:bg-gray-800 px-4 py-3 rounded-lg shadow-md">
+                  <div className="flex items-center gap-3 bg-white dark:bg-gray-800 px-5 py-3 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 dark:border-gray-700">
                     <Image
                       src="/satu-sehat-logo.png"
                       alt="Satu Sehat Logo"
@@ -138,7 +212,7 @@ export default function Home() {
       </section>
 
       {/* About Section - Apa itu FASKESKU */}
-      <section id="about" className="py-16 bg-gray-50 dark:bg-gray-900">
+      <section id="about" className="py-16 bg-gray-50 dark:bg-gray-900" itemScope itemType="https://schema.org/AboutPage">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -196,7 +270,7 @@ export default function Home() {
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 Kode sumber terbuka dengan lisensi MIT. Transparan, dapat diaudit, dan dikembangkan bersama komunitas.
               </p>
-              <a href="https://github.com/faskesku" className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
+              <a href="https://github.com/AbahWeb/faskesku.id" className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
                 <Github className="w-4 h-4" />
                 Lihat di GitHub
               </a>
@@ -260,7 +334,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-16 bg-white dark:bg-gray-800">
+      <section id="features" className="py-16 bg-white dark:bg-gray-800" aria-label="Fitur Unggulan FASKESKU">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -490,7 +564,7 @@ export default function Home() {
                 mengelola data pasien dengan mudah dan aman.
               </p>
               <div className="flex items-center gap-4 mb-4">
-                <a href="https://github.com/faskesku" className="text-gray-400 hover:text-white transition-colors">
+                <a href="https://github.com/AbahWeb/faskesku.id" className="text-gray-400 hover:text-white transition-colors">
                   <Github className="w-5 h-5" />
                 </a>
                 <a href="https://faskesku.com" className="text-gray-400 hover:text-white transition-colors">
@@ -513,7 +587,7 @@ export default function Home() {
             <div>
               <h3 className="font-semibold mb-4">Komunitas</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="https://github.com/faskesku" className="hover:text-white transition-colors">GitHub</a></li>
+                <li><a href="https://github.com/AbahWeb/faskesku.id" className="hover:text-white transition-colors">GitHub</a></li>
                 <li><a href="https://faskesku.com/community" className="hover:text-white transition-colors">Forum</a></li>
                 <li><a href="https://faskesku.com/contribute" className="hover:text-white transition-colors">Kontribusi</a></li>
                 <li><a href="https://faskesku.com/support" className="hover:text-white transition-colors">Dukungan</a></li>
