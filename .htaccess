@@ -1,0 +1,35 @@
+# Disable directory browsing
+Options -Indexes
+
+# Set default file
+DirectoryIndex index.html
+
+# Error pages
+ErrorDocument 404 /404.html
+
+# Enable rewrite (if mod_rewrite is available)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Don't rewrite files or directories
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  
+  # Rewrite everything else to index.html
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# Set correct MIME types
+<IfModule mod_mime.c>
+  AddType text/html .html
+  AddType text/css .css
+  AddType application/javascript .js
+  AddType image/svg+xml .svg
+  AddType image/x-icon .ico
+  AddType image/png .png
+  AddType image/jpeg .jpg .jpeg
+</IfModule>
+
+# UTF-8 encoding
+AddDefaultCharset UTF-8

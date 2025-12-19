@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FASKESKU - Aplikasi Rekam Medis Elektronik Gratis",
+  title: "faskesku.id",
   description: "Aplikasi rekam medis elektronik gratis untuk klinik dokter dan praktek mandiri. Download sekarang dan kelola data pasien dengan mudah.",
   keywords: "rekam medis, elektronik, gratis, klinik, dokter, praktek mandiri, FASKESKU",
 };

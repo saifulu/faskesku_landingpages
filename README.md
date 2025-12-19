@@ -34,3 +34,44 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ 
+## Deploy Cepat di aaPanel (Static Export)
+
+Jika konten bersifat statis (tanpa SSR/route dinamis), cara paling mudah adalah mengekspor situs statis dan mengunggah folder hasilnya ke aaPanel.
+
+1) Build dan export secara lokal:
+
+```bash
+npm run build:static
+```
+
+Perintah ini membuat folder `out/` di root proyek.
+
+2) Unggah ke aaPanel:
+- Buat situs baru di aaPanel: Website → Add Site → masukkan domain kamu.
+- Upload file ZIP dari folder `out/` atau unggah isi `out/` langsung ke document root domain (misal: `/www/wwwroot/namadomainkamu.com`).
+- Pastikan file `index.html` berada di root.
+
+3) Aktifkan SSL (opsional namun disarankan):
+- Website → pilih domain → SSL → Let’s Encrypt → Apply.
+
+Selesai. Situs langsung online tanpa perlu PM2/Node.
+
+## Alternatif: Jalankan sebagai Aplikasi Node (PM2)
+
+Jika kamu membutuhkan SSR atau fitur dinamis:
+
+1) Install dependencies di server:
+```bash
+cd /www/wwwroot/faskesku
+npm ci
+```
+
+2) Build dan start dengan PM2 (via aaPanel PM2 Manager):
+- Build: `npm run build`
+- PM2 → Add Project: Name: `faskesku`, Run Dir: `/www/wwwroot/faskesku`, Start Command: `npm run start`, Env: `NODE_ENV=production`, `PORT=3000`.
+
+3) Nginx Reverse Proxy:
+- Website → domain → Reverse Proxy → Target: `http://127.0.0.1:3000`.
+
+Dengan opsi ini, Next.js berjalan sebagai server Node dan Nginx meneruskan trafik ke port 3000.

@@ -12,7 +12,7 @@ export default function Home() {
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
                 <Shield className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900 dark:text-white">FASKESKU</span>
+              <span className="text-xl font-bold text-gray-900 dark:text-white">faskesku.id</span>
             </div>
             <div className="flex-1"></div>
             <div className="hidden md:flex items-center space-x-8">
@@ -52,14 +52,22 @@ export default function Home() {
                 Sistem yang dapat disesuaikan dengan kebutuhan praktek Anda untuk meningkatkan efisiensi pelayanan kesehatan.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2">
+                <a
+                  href="/download"
+                  className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2"
+                >
                   <Download className="w-5 h-5" />
                   Download Gratis
-                </button>
-                <button className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center gap-2">
+                </a>
+                <a
+                  href="https://github.com/jebeng83/faskesku.id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center gap-2"
+                >
                   <Github className="w-5 h-5" />
                   Lihat Source Code
-                </button>
+                </a>
               </div>
 
               {/* Integration Partners */}
