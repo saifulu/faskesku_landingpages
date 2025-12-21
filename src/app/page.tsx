@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Download, Shield, Users, Clock, CheckCircle, Star, Menu, Moon, Sun, Code, Heart, Globe, Github, FileText, Activity, Calendar, Stethoscope, Monitor, Database, MessageCircle } from "lucide-react";
+import { Download, Shield, Users, Clock, CheckCircle, Star, Menu, Moon, Code, Heart, Globe, Github, MessageCircle, CalendarDays, Video, MapPin, ArrowRight } from "lucide-react";
 import FeatureSlider from "../components/FeatureSlider";
 import Script from "next/script";
 
@@ -55,7 +55,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-cyan-400 via-blue-500 to-blue-700 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
       {/* JSON-LD Structured Data for SEO */}
       <Script
         id="structured-data"
@@ -66,49 +66,88 @@ export default function Home() {
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Large gradient orbs */}
-        <div className="absolute top-0 -left-40 w-96 h-96 bg-gradient-to-br from-teal-200/40 to-emerald-200/40 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/4 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-cyan-200/30 to-teal-200/30 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-gradient-to-br from-emerald-200/40 to-cyan-200/40 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 -left-40 w-96 h-96 bg-gradient-to-br from-white/10 to-cyan-300/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-blue-300/15 to-white/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-cyan-300/15 rounded-full blur-3xl"></div>
 
-        {/* Subtle pattern overlay */}
+        {/* Grid Pattern */}
         <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgb(20 184 166) 1px, transparent 0)`,
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)`,
+          backgroundSize: '50px 50px'
+        }}></div>
+
+        {/* Dot Pattern */}
+        <div className="absolute inset-0 opacity-[0.04]" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.6) 1px, transparent 0)`,
           backgroundSize: '40px 40px'
         }}></div>
+
+        {/* Diagonal Lines Pattern */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,0.3) 35px, rgba(255,255,255,0.3) 36px)`,
+        }}></div>
+
+        {/* Floating Geometric Shapes */}
+        <div className="absolute top-20 left-10 w-20 h-20 border-2 border-white/20 rounded-lg rotate-12 animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-16 h-16 border-2 border-white/20 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-40 left-1/4 w-24 h-24 border-2 border-white/15 rounded-lg -rotate-6 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/3 right-1/3 w-12 h-12 border-2 border-white/20 rounded-full animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+
+        {/* Hexagon Pattern */}
+        <svg className="absolute top-10 right-10 w-32 h-32 opacity-[0.05]" viewBox="0 0 100 100">
+          <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="1" />
+          <polygon points="50,15 80,32.5 80,67.5 50,85 20,67.5 20,32.5" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1" />
+        </svg>
+
+        <svg className="absolute bottom-20 left-20 w-40 h-40 opacity-[0.05]" viewBox="0 0 100 100">
+          <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="1" />
+        </svg>
+
+        {/* Circuit-like Pattern */}
+        <svg className="absolute top-1/2 left-10 w-24 h-24 opacity-[0.06]" viewBox="0 0 100 100">
+          <circle cx="20" cy="20" r="3" fill="rgba(255,255,255,0.6)" />
+          <circle cx="80" cy="20" r="3" fill="rgba(255,255,255,0.5)" />
+          <circle cx="20" cy="80" r="3" fill="rgba(255,255,255,0.6)" />
+          <circle cx="80" cy="80" r="3" fill="rgba(255,255,255,0.5)" />
+          <line x1="20" y1="20" x2="80" y2="20" stroke="rgba(255,255,255,0.4)" strokeWidth="1" />
+          <line x1="80" y1="20" x2="80" y2="80" stroke="rgba(255,255,255,0.4)" strokeWidth="1" />
+          <line x1="80" y1="80" x2="20" y2="80" stroke="rgba(255,255,255,0.4)" strokeWidth="1" />
+          <line x1="20" y1="80" x2="20" y2="20" stroke="rgba(255,255,255,0.4)" strokeWidth="1" />
+        </svg>
       </div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 z-50 shadow-sm">
+      <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/70 backdrop-blur-xl border-b border-white/30 dark:border-gray-700/50 z-50 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-teal-500 via-emerald-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-teal-500/30">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 via-indigo-500 to-sky-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
                 <Shield className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">faskesku.id</span>
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">faskesku.id</span>
             </div>
             <div className="flex-1"></div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#about" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors relative group">
+              <a href="#about" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative group">
                 Tentang
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </a>
-              <a href="#features" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors relative group">
+              <a href="#features" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative group">
                 Fitur
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </a>
-              <a href="#download" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors relative group">
-                Download
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
+              <a href="#events" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative group">
+                Events
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </a>
-              <a href="#contact" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors relative group">
+              <a href="#contact" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative group">
                 Kontak
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </a>
               <button className="p-2 rounded-xl bg-gray-100/80 dark:bg-gray-800/80 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 backdrop-blur-sm">
                 <Moon className="w-5 h-5 text-gray-700 dark:text-gray-300" />
               </button>
-              <a href="#numpang-server" className="bg-gradient-to-r from-purple-600 via-purple-500 to-pink-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:shadow-xl hover:shadow-purple-500/30 hover:scale-105 transition-all duration-300 text-sm">
+              <a href="#numpang-server" className="bg-gradient-to-r from-fuchsia-600 via-pink-600 to-rose-600 text-white px-5 py-2.5 rounded-xl font-bold hover:shadow-xl hover:shadow-fuchsia-500/40 hover:scale-105 transition-all duration-300 text-sm">
                 ✨ Numpang Server
               </a>
             </div>
@@ -120,31 +159,31 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8" itemScope itemType="https://schema.org/SoftwareApplication">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative overflow-hidden pt-24 pb-12 px-4 sm:px-6 lg:px-8" itemScope itemType="https://schema.org/SoftwareApplication">
+        <div className="absolute inset-0 hero-motif" aria-hidden="true"></div>
+        <div className="absolute inset-0 hero-scrim" aria-hidden="true"></div>
+        <div className="relative max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gray-900 dark:text-white leading-tight tracking-tight">
-                <span className="bg-gradient-to-r from-teal-600 via-emerald-600 to-cyan-600 bg-clip-text text-transparent drop-shadow-sm">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white leading-[1.05] tracking-tight">
+                <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600 bg-clip-text text-transparent drop-shadow-sm">
                   FASKESKU
                 </span>
                 <br />
-                <span className="text-gray-800 dark:text-gray-100">Rekam Medis</span>
-                <br />
-                <span className="text-gray-800 dark:text-gray-100">Digital</span>
+                <span className="text-gray-800 dark:text-gray-100">Rekam Medis Digital</span>
               </h1>
-              <p className="mt-8 text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl">
-                Solusi rekam medis elektronik <strong className="text-teal-600 dark:text-teal-400">gratis dan open source</strong> untuk FKTP (Puskesmas, Klinik, Dokter, dan Praktek Mandiri).
-                <br /><br />
+              <p className="mt-4 text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl">
+                Solusi rekam medis elektronik <strong className="text-blue-600 dark:text-blue-400">gratis dan open source</strong> untuk FKTP (Puskesmas, Klinik, Dokter, dan Praktek Mandiri).
+                <br />
                 Kelola data pasien, jadwal konsultasi, dan riwayat medis dengan mudah dan aman.
                 Sistem yang dapat disesuaikan dengan kebutuhan praktek Anda untuk meningkatkan efisiensi pelayanan kesehatan.
               </p>
-              <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <a
                   href="/download"
-                  className="group bg-gradient-to-r from-teal-600 via-emerald-600 to-cyan-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-teal-500/40 transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 relative overflow-hidden"
+                  className="group bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-blue-500/40 transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 relative overflow-hidden"
                 >
-                  <span className="absolute inset-0 bg-gradient-to-r from-teal-500 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   <Download className="w-6 h-6 relative z-10" />
                   <span className="relative z-10">Download Gratis</span>
                 </a>
@@ -152,16 +191,16 @@ export default function Home() {
                   href="https://github.com/AbahWeb/faskesku.id"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-teal-500 dark:hover:border-teal-500 transition-all duration-300 flex items-center justify-center gap-3"
+                  className="group border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300 flex items-center justify-center gap-3"
                 >
-                  <Github className="w-6 h-6 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors" />
-                  <span className="group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Lihat Source Code</span>
+                  <Github className="w-6 h-6 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" />
+                  <span className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Lihat Source Code</span>
                 </a>
               </div>
 
               {/* Integration Partners */}
-              <div className="mt-10">
-                <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-4 text-center lg:text-left uppercase tracking-wider">Terintegrasi dengan:</p>
+              <div className="mt-6">
+                <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 text-center lg:text-left uppercase tracking-wider">Terintegrasi dengan:</p>
                 <div className="flex items-center justify-center lg:justify-start gap-6">
                   {/* BPJS Kesehatan Logo */}
                   <div className="flex items-center gap-3 bg-white dark:bg-gray-800 px-5 py-3 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 dark:border-gray-700">
@@ -189,7 +228,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mt-8 flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-500 dark:text-gray-400">
+              <div className="mt-4 flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-500 dark:text-gray-400">
                 <div className="flex items-center gap-1">
                   <CheckCircle className="w-4 h-4 text-green-500" />
                   100% Gratis
@@ -212,7 +251,7 @@ export default function Home() {
       </section>
 
       {/* About Section - Apa itu FASKESKU */}
-      <section id="about" className="py-16 bg-gray-50 dark:bg-gray-900" itemScope itemType="https://schema.org/AboutPage">
+      <section id="about" className="py-16 bg-white/40 dark:bg-gray-900/40 backdrop-blur-sm" itemScope itemType="https://schema.org/AboutPage">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -239,7 +278,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
+            <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-2xl p-8 shadow-xl border border-white/50 dark:border-gray-700/50">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">100%</div>
@@ -262,12 +301,14 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+            <div className="relative overflow-hidden bg-white/90 dark:bg-gray-800/90 backdrop-blur p-5 rounded-xl shadow-md hover:shadow-lg transition-all border border-gray-200/70 dark:border-gray-700/70">
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" aria-hidden="true"></div>
+              <Code className="absolute -right-6 -top-8 w-28 h-28 text-blue-600/20 dark:text-blue-300/10 pointer-events-none" aria-hidden="true" />
+              <div className="w-11 h-11 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-3">
                 <Code className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Open Source</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Open Source</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-3">
                 Kode sumber terbuka dengan lisensi MIT. Transparan, dapat diaudit, dan dikembangkan bersama komunitas.
               </p>
               <a href="https://github.com/AbahWeb/faskesku.id" className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
@@ -276,12 +317,14 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-4">
+            <div className="relative overflow-hidden bg-white/90 dark:bg-gray-800/90 backdrop-blur p-5 rounded-xl shadow-md hover:shadow-lg transition-all border border-gray-200/70 dark:border-gray-700/70">
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-500/50 to-transparent" aria-hidden="true"></div>
+              <Heart className="absolute -right-6 -top-8 w-28 h-28 text-green-600/20 dark:text-green-300/10 pointer-events-none" aria-hidden="true" />
+              <div className="w-11 h-11 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-3">
                 <Heart className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Dibuat dengan ❤️</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Dibuat dengan ❤️</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-3">
                 Dikembangkan oleh tim developer Indonesia yang peduli dengan kemajuan sistem kesehatan nasional.
               </p>
               <div className="text-sm text-gray-500 dark:text-gray-400">
@@ -289,12 +332,14 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+            <div className="relative overflow-hidden bg-white/90 dark:bg-gray-800/90 backdrop-blur p-5 rounded-xl shadow-md hover:shadow-lg transition-all border border-gray-200/70 dark:border-gray-700/70">
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" aria-hidden="true"></div>
+              <Globe className="absolute -right-6 -top-8 w-28 h-28 text-purple-600/20 dark:text-purple-300/10 pointer-events-none" aria-hidden="true" />
+              <div className="w-11 h-11 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-3">
                 <Globe className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Komunitas Global</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Komunitas Global</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-3">
                 Bergabung dengan komunitas developer dan tenaga kesehatan dari seluruh dunia yang berkontribusi.
               </p>
               <a href="https://faskesku.com/community" className="text-purple-600 dark:text-purple-400 hover:underline">
@@ -334,7 +379,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-16 bg-white dark:bg-gray-800" aria-label="Fitur Unggulan FASKESKU">
+      <section id="features" className="py-16 bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm" aria-label="Fitur Unggulan FASKESKU">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -371,119 +416,172 @@ export default function Home() {
       </section>
 
       {/* Numpang Server Section */}
-      <section id="numpang-server" className="py-16 bg-gradient-to-br from-purple-50 via-pink-50 to-purple-50 dark:from-purple-900/20 dark:via-pink-900/20 dark:to-purple-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Numpang Server
+      <section id="numpang-server" className="relative overflow-hidden py-16 bg-gradient-to-br from-fuchsia-50 via-white to-rose-50 dark:from-fuchsia-900/20 dark:via-gray-900/10 dark:to-rose-900/20">
+        <div className="absolute -top-24 -left-24 w-[420px] h-[420px] rounded-full bg-gradient-to-br from-fuchsia-300/45 to-transparent blur-3xl" aria-hidden="true"></div>
+        <div className="absolute -bottom-28 -right-28 w-[520px] h-[520px] rounded-full bg-gradient-to-br from-sky-300/35 to-transparent blur-3xl" aria-hidden="true"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+              <span className="inline-flex items-center rounded-2xl bg-gradient-to-r from-fuchsia-600 via-pink-600 to-rose-600 px-5 py-2 text-white shadow-lg shadow-pink-500/30 ring-1 ring-white/40">
+                Numpang Server
+              </span>
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="mt-5 text-base sm:text-lg text-gray-800 dark:text-gray-100 max-w-3xl mx-auto bg-white/75 dark:bg-gray-900/45 backdrop-blur-md border border-white/60 dark:border-white/10 rounded-2xl px-6 py-4 shadow-sm">
               Tidak mau ribet kelola server sendiri? Kami sediakan layanan hosting dengan infrastruktur enterprise,
               monitoring 24/7, dan support teknis profesional.
             </p>
           </div>
 
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-purple-100 dark:border-purple-800">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-6">
-                <Shield className="w-8 h-8 text-white" />
+          {/* CTA Section with Image */}
+          <div className="bg-gradient-to-r from-fuchsia-600 via-pink-600 to-rose-600 rounded-2xl overflow-hidden shadow-2xl">
+            <div className="grid lg:grid-cols-2 gap-0 items-center">
+              {/* Left: Image */}
+              <div className="relative h-64 lg:h-full min-h-[400px]">
+                <Image
+                  src="/server-room.jpg"
+                  alt="FASKESKU Server Room - Enterprise Infrastructure"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-600/50 to-transparent"></div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Keamanan Terjamin</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Server dengan keamanan tingkat enterprise, SSL certificate, firewall, dan backup otomatis setiap hari.
-              </p>
-            </div>
 
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-purple-100 dark:border-purple-800">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-6">
-                <Monitor className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Monitoring 24/7</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Pemantauan server dan aplikasi secara real-time dengan notifikasi otomatis jika ada masalah.
-              </p>
-            </div>
-
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-purple-100 dark:border-purple-800">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Support Profesional</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Tim support teknis siap membantu via WhatsApp, email, atau telepon kapan saja dibutuhkan.
-              </p>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              {/* Left: Text */}
-              <div className="text-left">
-                <h3 className="text-3xl font-bold text-white mb-4">
+              {/* Right: Content */}
+              <div className="p-8 lg:p-12 bg-gradient-to-br from-fuchsia-600 to-pink-600">
+                <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4 drop-shadow-lg">
                   Siap Mulai Tanpa Ribet?
                 </h3>
-                <p className="text-xl text-purple-100">
+                <p className="text-lg lg:text-xl text-white/95 mb-6 leading-relaxed">
                   Fokus pada pasien Anda, biarkan kami yang urus infrastruktur teknologi.
-                  Server enterprise-grade dengan <span className="font-bold text-yellow-300">uptime 99.9%</span>,
+                  Server enterprise-grade dengan <span className="font-bold text-yellow-300 bg-yellow-900/30 px-2 py-1 rounded">uptime 99.9%</span>,
                   backup otomatis, dan support 24/7. Tanpa ribet setup!
                 </p>
-              </div>
 
-              {/* Right: Buttons */}
-              <div className="flex flex-col gap-4">
-                <a
-                  href="https://my.abahweb.com/login"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2"
-                >
-                  <Users className="w-5 h-5" />
-                  Daftar Sekarang
-                </a>
-                <a
-                  href="https://wa.me/6285229572326?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Numpang%20Server%20FASKESKU"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-purple-500/30 backdrop-blur text-white border-2 border-white/30 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/50 transition-colors flex items-center justify-center gap-2"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Konsultasi Gratis
-                </a>
-                <p className="text-purple-100 text-sm text-center mt-2">
-                  💬 Tim kami akan menghubungi Anda dalam 1x24 jam
-                </p>
+                <div className="flex flex-col gap-3">
+                  <a
+                    href="https://my.abahweb.com/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white text-fuchsia-600 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2"
+                  >
+                    <Users className="w-5 h-5" />
+                    Daftar Sekarang
+                  </a>
+                  <a
+                    href="https://wa.me/6285229572326?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Numpang%20Server%20FASKESKU"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white/20 backdrop-blur-sm text-white border-2 border-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all duration-200 flex items-center justify-center gap-2"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    Konsultasi Gratis
+                  </a>
+                  <p className="text-white/90 text-sm text-center mt-2 flex items-center justify-center gap-2">
+                    <span className="text-xl">💬</span> Tim kami akan menghubungi Anda dalam 1x24 jam
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Download Section */}
-      <section id="download" className="py-16 bg-gradient-to-r from-blue-600 to-green-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Siap Memulai dengan FASKESKU?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Download aplikasi gratis sekarang dan rasakan kemudahan mengelola rekam medis digital untuk klinik Anda.
-          </p>
-          <div className="flex justify-center">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-2">
-              <Download className="w-5 h-5" />
-              Download
-            </button>
+      {/* Events Section */}
+      <section id="events" className="py-16 bg-gradient-to-r from-blue-600/95 via-indigo-600/95 to-sky-600/95 backdrop-blur-sm">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Faskesku Events
+            </h2>
+            <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
+              Ikuti webinar, workshop, dan meetup komunitas untuk belajar implementasi RME, integrasi Satu Sehat, dan praktik terbaik operasional klinik.
+            </p>
           </div>
+
+          <div className="mt-10 grid md:grid-cols-3 gap-6">
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-white shadow-lg">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2 text-blue-100">
+                  <CalendarDays className="w-5 h-5" />
+                  <span className="text-sm font-semibold">Setiap Bulan</span>
+                </div>
+                <div className="flex items-center gap-2 text-blue-100">
+                  <Video className="w-5 h-5" />
+                  <span className="text-sm font-semibold">Online</span>
+                </div>
+              </div>
+              <h3 className="mt-4 text-xl font-bold">Webinar Implementasi</h3>
+              <p className="mt-2 text-blue-100 leading-relaxed">
+                Demo fitur, alur kerja klinik, dan tanya jawab live bersama tim & komunitas.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-white shadow-lg">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2 text-blue-100">
+                  <CalendarDays className="w-5 h-5" />
+                  <span className="text-sm font-semibold">Quarterly</span>
+                </div>
+                <div className="flex items-center gap-2 text-blue-100">
+                  <MapPin className="w-5 h-5" />
+                  <span className="text-sm font-semibold">Hybrid</span>
+                </div>
+              </div>
+              <h3 className="mt-4 text-xl font-bold">Workshop Teknis</h3>
+              <p className="mt-2 text-blue-100 leading-relaxed">
+                Setup, deployment, backup, dan keamanan untuk operasional yang stabil.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-white shadow-lg">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2 text-blue-100">
+                  <CalendarDays className="w-5 h-5" />
+                  <span className="text-sm font-semibold">Community</span>
+                </div>
+                <div className="flex items-center gap-2 text-blue-100">
+                  <Users className="w-5 h-5" />
+                  <span className="text-sm font-semibold">Meetup</span>
+                </div>
+              </div>
+              <h3 className="mt-4 text-xl font-bold">Meetup & Sharing</h3>
+              <p className="mt-2 text-blue-100 leading-relaxed">
+                Berbagi pengalaman, best practice, dan roadmap fitur terbaru.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://faskesku.com/community"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-blue-700 px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 inline-flex items-center gap-2"
+            >
+              Lihat Kalender Event
+              <ArrowRight className="w-5 h-5" />
+            </a>
+            <a
+              href="https://wa.me/6285229572326?text=Halo%20Tim%20FASKESKU%2C%20saya%20ingin%20ikut%20Faskesku%20Events.%20Mohon%20info%20jadwal%20dan%20link%20pendaftaran."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/10 text-white border-2 border-white/30 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/15 transition-colors inline-flex items-center gap-2"
+            >
+              Daftar via WhatsApp
+              <MessageCircle className="w-5 h-5" />
+            </a>
+          </div>
+
           <div className="mt-8 flex items-center justify-center gap-8 text-blue-100">
             <div className="flex items-center gap-2">
-              <Star className="w-5 h-5 text-yellow-400 fill-current" />
-              <span>4.8/5 Rating</span>
+              <Star className="w-5 h-5 text-yellow-300 fill-current" />
+              <span>Komunitas Aktif</span>
             </div>
             <div>•</div>
-            <div>1000+ Klinik Terdaftar</div>
+            <div>Event Gratis</div>
             <div>•</div>
-            <div>100% Gratis & Open Source</div>
+            <div>Sertifikat Tersedia</div>
           </div>
         </div>
       </section>
@@ -549,7 +647,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer id="contact" className="bg-gray-900 dark:bg-black text-white py-12">
+      <footer id="contact" className="bg-gray-900/95 dark:bg-black/95 backdrop-blur-md text-white py-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
@@ -580,7 +678,7 @@ export default function Home() {
               <ul className="space-y-2 text-gray-400">
                 <li><a href="#about" className="hover:text-white transition-colors">Tentang</a></li>
                 <li><a href="#features" className="hover:text-white transition-colors">Fitur</a></li>
-                <li><a href="#download" className="hover:text-white transition-colors">Download</a></li>
+                <li><a href="#events" className="hover:text-white transition-colors">Events</a></li>
                 <li><a href="https://docs.faskesku.com" className="hover:text-white transition-colors">Dokumentasi</a></li>
               </ul>
             </div>
