@@ -8,29 +8,29 @@ const features = [
     {
         id: 'puskesmas',
         label: 'Puskesmas',
-        title: 'Puskesmas Digital',
-        description: 'Sistem Informasi Manajemen Puskesmas (SIMPUS) modern. Terintegrasi penuh dengan P-Care BPJS Kesehatan dan Satu Sehat Kemenkes.',
+        title: 'Sistem Informasi Manajemen Puskesmas (SIMPUS)',
+        description: 'Sistem Informasi Manajemen Puskesmas (SIMPUS) modern. Terintegrasi penuh dengan P-Care BPJS Kesehatan dan Satu Sehat Kemenkes untuk efisiensi layanan faskes.',
         image: '/puskesmas-hero.jpg'
     },
     {
         id: 'klinik',
         label: 'Klinik Pratama',
-        title: 'Klinik & Praktek Mandiri',
-        description: 'Kelola pendaftaran pasien, rekam medis, dan stok obat dalam satu aplikasi yang terintegrasi. Mudah digunakan dan sesuai standar Satu Sehat.',
+        title: 'Aplikasi Klinik & Rekam Medis Digital',
+        description: 'Kelola pendaftaran pasien, rekam medis elektronik (RME), dan stok obat dalam satu aplikasi klinik yang terintegrasi. Sesuai standar akreditasi klinik.',
         image: '/klinik-hero.jpg'
     },
     {
         id: 'praktek',
         label: 'Praktek Dokter',
-        title: 'Praktek Dokter Mandiri',
-        description: 'Solusi RME sederhana dan efisien untuk dokter praktek perorangan. Fokus pada pelayanan pasien tanpa ribet administrasi.',
+        title: 'Software Rekamedis Praktek Dokter Mandiri',
+        description: 'Solusi Rekamedis digital / RME sederhana dan efisien untuk dokter praktek perorangan. Fokus pada pelayanan pasien tanpa ribet administrasi.',
         image: '/dokter-hero.png'
     },
     {
         id: 'apotek',
         label: 'Apotek',
-        title: 'Manajemen Apotek',
-        description: 'Kontrol stok obat real-time, notifikasi kadaluarsa, dan integrasi langsung dengan resep elektronik dokter.',
+        title: 'Sistem Manajemen Apotek Digital',
+        description: 'Kontrol stok obat real-time, notifikasi kadaluarsa, dan integrasi langsung dengan resep elektronik dari sistem rekam medis dokter.',
         image: '/apotek-hero.jpg'
     }
 ];

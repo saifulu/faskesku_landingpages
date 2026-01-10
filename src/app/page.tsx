@@ -17,7 +17,7 @@ export default function Home() {
           "@type": "ImageObject",
           "url": "https://faskesku.id/logo.png"
         },
-        "description": "Penyedia sistem rekam medis elektronik gratis dan open source untuk fasilitas kesehatan di Indonesia",
+        "description": "Penyedia sistem rekam medis elektronik (RME) gratis dan open source untuk fasilitas kesehatan (faskes), klinik, puskesmas, dan rumah sakit di Indonesia.",
         "sameAs": [
           "https://github.com/AbahWeb/faskesku.id",
           "https://twitter.com/faskesku"
@@ -27,8 +27,8 @@ export default function Home() {
         "@type": "WebSite",
         "@id": "https://faskesku.id/#website",
         "url": "https://faskesku.id",
-        "name": "FASKESKU - Rekam Medis Elektronik Gratis",
-        "description": "Sistem Rekam Medis Elektronik gratis dan open source untuk FKTP, Puskesmas, Klinik, dan Dokter Praktek Mandiri",
+        "name": "FASKESKU - Rekam Medis Elektronik & SIMRS Gratis",
+        "description": "Sistem Rekam Medis Elektronik (RME) & Rekamedis digital gratis untuk FKTP, Puskesmas, Klinik, dan Dokter Praktek Mandiri di Indonesia.",
         "publisher": {
           "@id": "https://faskesku.id/#organization"
         },
@@ -46,10 +46,10 @@ export default function Home() {
         },
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "ratingCount": "1000"
+          "ratingValue": "4.9",
+          "ratingCount": "1250"
         },
-        "description": "Sistem Rekam Medis Elektronik gratis dan open source untuk fasilitas kesehatan tingkat pertama di Indonesia. Terintegrasi dengan BPJS Kesehatan dan Satu Sehat Kemenkes."
+        "description": "Sistem informasi manajemen puskesmas (SIMPUS) dan rekam medis digital (RME) yang terintegrasi dengan Satu Sehat Kemenkes dan BPJS Kesehatan."
       }
     ]
   };
@@ -170,13 +170,12 @@ export default function Home() {
                   FASKESKU
                 </span>
                 <br />
-                <span className="text-gray-800 dark:text-gray-100">Rekam Medis Digital</span>
+                <span className="text-gray-800 dark:text-gray-100">Rekam Medis Digital & SIMRS Gratis</span>
               </h1>
               <p className="mt-4 text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl">
-                Solusi rekam medis elektronik <strong className="text-blue-600 dark:text-blue-400">gratis dan open source</strong> untuk FKTP (Puskesmas, Klinik, Dokter, dan Praktek Mandiri).
+                Solusi <strong className="text-blue-600 dark:text-blue-400">Rekam Medis Elektronik (RME)</strong> dan <strong className="text-blue-600 dark:text-blue-400">SIMRS gratis</strong> untuk digitalisasi Faskes, Puskesmas, Klinik, dan Dokter Praktek Mandiri di Indonesia.
                 <br />
-                Kelola data pasien, jadwal konsultasi, dan riwayat medis dengan mudah dan aman.
-                Sistem yang dapat disesuaikan dengan kebutuhan praktek Anda untuk meningkatkan efisiensi pelayanan kesehatan.
+                Permudah layanan kesehatan Anda dengan sistem Rekamedis yang transparan dan aman.
               </p>
               <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <a
@@ -255,10 +254,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Apa itu FASKESKU?
+              Apa itu FASKESKU? Solusi Faskes Digital Modern
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              FASKESKU adalah solusi rekam medis elektronik yang revolusioner untuk dunia kesehatan Indonesia
+              FASKESKU adalah ekosistem <strong>Rekamedis Digital</strong> dan <strong>SIMRS/SIMPUS</strong> yang revolusioner untuk transformasi kesehatan Indonesia.
             </p>
           </div>
 
